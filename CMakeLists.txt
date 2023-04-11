@@ -1,0 +1,29 @@
+add_executable(
+        image_processor
+        image_processor.cpp
+        BmpImage.h
+        Filter.h
+        Filter.cpp
+        BmpImage.cpp
+        CompositeFilter.h
+        CompositeFilter.cpp
+        GrayscaleFilter.cpp
+        NegativeFilter.h
+        NegativeFilter.cpp
+        MatrixFilter.cpp
+        SharpeningFilter.h
+        CropFilter.h
+        CropFilter.cpp
+        ThresholdFilter.h
+        ThresholdFilter.cpp
+        SharpeningFilter.cpp
+        EdgeDetectionFilter.cpp
+        EdgeDetectionFilter.h
+        GaussianBlurFilter.cpp
+        GaussianBlurFilter.h
+        CustomException.cpp
+        CustomException.h
+        CustomFilter.cpp
+        CustomFilter.h)
+
+add_catch(test_image_processor test.cpp BmpImage.cpp CustomException.cpp CustomFilter.cpp Filter.cpp)
